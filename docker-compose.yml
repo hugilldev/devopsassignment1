@@ -1,7 +1,7 @@
 services:
   flask-app:
     build:
-      context: flask-app
+      context: .
       dockerfile: Dockerfile
   nginx:
     image: nginx:latest

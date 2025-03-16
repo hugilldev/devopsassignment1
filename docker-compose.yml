@@ -3,11 +3,11 @@ services:
     build:
       context: flask-app
       dockerfile: Dockerfile
-    nginx:
-      image: nginx:latest
-      ports:
-        - "80:80"
-      volumes:
-        - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-      depends_on:
-        - flask-app
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - flask-app
